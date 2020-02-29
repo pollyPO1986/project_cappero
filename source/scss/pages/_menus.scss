@@ -1,0 +1,229 @@
+// Menu
+.menu_list {
+    @include table-up-width {
+        @include flexbox(flex, nowrap, space-between, center);
+        width: 530px;
+    }
+    @include phone-width {
+        @include flexbox(flex, wrap, space-around, center);
+    }
+    margin: 15px auto 45px;
+    li {
+        text-align: center;
+        position: relative;
+        +li {
+            &:before {
+                @include table-up-width {
+                    content: '／';
+                    color: $menugrey;
+                    display: inline-block;
+                    @include rem(font-size, 1.2rem);
+                    position: absolute;
+                    top: 25%;
+                    left: -48px;
+                }
+            }
+        }
+        &.active {
+            >a:before {
+                content: '';
+                display: block;
+                @extend %triangle;
+                position: absolute;
+                top: 8px;
+                left: -12px;
+            }
+        }
+        &:nth-child(3) {
+        		a:hover:before {
+        				@include pc-width {
+										left: 0;
+        				}
+        		}
+        		&.active {
+        				>a:before {
+        						content: '';
+		                display: block;
+		                @extend %triangle;
+		                position: absolute;
+		                top: 8px;
+		                left: 0;
+        				}
+        		}
+        }
+        &:last-child {
+        		a:hover:before {
+        				@include pc-width {
+										left: -12px;
+        				}
+        		}
+        }
+    }
+    a {
+        color: $beige;
+        display: inline-block;
+        @include rem(font-size, 1.8rem);
+        &:hover {
+            color: $buttonyellow;
+            >small {
+                color: $white;
+            }
+            &:before {
+                content: '';
+                display: block;
+                @extend %triangle;
+                position: absolute;
+                top: 8px;
+                left: -12px;
+                animation-duration: .5s;
+                animation-fill-mode: both;
+                animation-name: fadeInLeft;
+            }
+        }
+        >small {
+            color: $menugrey;
+            display: block;
+            @include rem(font-size, 1.3rem);
+        }
+    }
+}
+
+.menu_content {
+    letter-spacing: 1px;
+    >li {
+        text-align: center;
+        +li {
+            margin-top: 60px;
+        }
+        .menu_title {
+            color: $menubeige;
+            display: inline-block;
+            @include rem(font-size, 2.4rem);
+            font-weight: 300;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+            &:before {
+                content: '.';
+                display: inline-block;
+                padding-right: 8px;
+                padding-left: 8px;
+                vertical-align: 8px;
+            }
+            &:after {
+                background-color: $menubeige;
+                content: '';
+                display: block;
+                height: 1px;
+                margin-top: 2px;
+            }
+        }
+    }
+    .main_courst {
+        .pic-box {
+            >.pic_169 {
+                @include table-up-width {
+                    height: calc(222px / 16 * 9);
+                }
+                @include table-width {
+                    height: calc(230px / 16 * 9);
+                }
+                @include phone-width {
+                    height: calc(190px / 16 * 9);
+                }
+            }
+            >.caption {
+                h3 {
+                    font-weight: 300;
+                }
+                .sub {
+                    color: $menugrey;
+                    font-family: Verdana, Geneva, sans-serif;
+                    @include rem(font-size, 1.3rem);
+                    text-transform: capitalize;
+                    margin-top: 0;
+                }
+            }
+        }
+        &.dinner {
+        		@include pc-width {
+        				margin: 0 auto;
+        				width: 696px;	
+        		}
+        }
+    }
+    .meals_content {
+        @include flexbox(flex, nowrap, center, center);
+        @include table-up-width {
+            margin: 0 auto;
+            width: 480px;
+        }
+        >li {
+            color: $white;
+            @include rem(font-size, 1.8rem);
+            font-weight: 300;
+            +li {
+                margin-left: 36px;
+            }
+            small {
+                color: $menugrey;
+                display: block;
+                font-family: Verdana, Geneva, sans-serif;
+                @include rem(font-size, 1.3rem);
+                text-transform: capitalize;
+            }
+        }
+    }
+    .any_price {
+        color: $grey;
+        display: inline-block;
+        @include rem(font-size, 1.8rem);
+        &:after {
+            background-color: $grey;
+            content: '';
+            display: block;
+            height: 1px;
+        }
+    }
+
+    &.drink {
+        @include flexbox(flex, wrap, space-between, flex-start);
+        >li {
+        		@include table-up-width {
+        				flex-basis: 33%;
+        		}
+        		@include phone-width {
+        				flex-basis: 100%;
+        		}
+						+li {
+								margin-top: 0;
+						}
+
+		        >.menu_title {
+		        		@include fluid-type(15px,18px,320px,1024px);
+		        		margin-top: 6px;
+		        		&:before {
+		        				padding-right: 5px;
+		                padding-left: 5px;
+		                vertical-align: 5px;
+		        		}
+		        }
+		        >.meals_content {
+		        		@include flexbox(flex, wrap, center, center);
+		        		margin-bottom: 60px;
+		        		width: 100%;
+		        		>li {
+		        				flex: 100%;
+		        				+li {
+		        						margin-top: 15px;
+		        						margin-left: 0;
+		        				}
+		        		}
+		        }
+        }
+        .drink_title {
+        		color: $menubeige;
+            @include fluid-type(20px,24px,320px,1024px);
+            font-weight: 400;
+        }
+    }
+}

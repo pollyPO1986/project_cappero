@@ -1,0 +1,81 @@
+// Footer
+.footer_content {
+    border-top: 1px solid rgba(darken($grey, 25%), .3);
+    padding: 15px 0;
+}
+
+.footer_companyinfo {
+    text-align: center;
+    letter-spacing: 1px;
+    p {
+        color: darken($white, 10%);
+        @include rem(font-size, 1.5rem);
+        line-height: 170%;
+    }
+    a {
+        color: $buttonyellow;
+        display: inline-block;
+        @include rem(font-size, 2.4rem);
+        line-height: 120%;
+        letter-spacing: 1px;
+        margin-bottom: 5px;
+        &:after {
+            border-bottom: 1px solid $buttonyellow;
+            content: '';
+            display: block;
+        }
+        &:hover,
+        &:focus {
+            color: $yellow;
+            &:after {
+                border-bottom: 1px solid $yellow;
+            }
+        }
+    }
+    .web_author {
+        color: $grey;
+        @include rem(font-size, 1.5rem);
+        &:after {
+            border-bottom: none;
+            content: '';
+            display: inline;
+        }
+        &:hover,
+        &:focus {
+            color: $buttonyellow;
+            &:after {
+                border-bottom: none;
+            }
+        }
+    }
+}
+
+.footer_logo {
+    height: auto;
+    margin: 0 auto;
+    @include table-up-width {
+        margin-top: 11px;
+    }
+    @include phone-width {
+        width: 150px;
+        margin: 0 auto;
+    }
+}
+
+.copyright {
+    color: $grey;
+    font-weight: 300;
+    font-family: "Noto Sans TC", sans-serif;
+    @include rem(font-size, 1.5rem);
+    padding: 15px 0;
+    border-top: 1px solid rgba(darken($grey, 25%), .3);
+    letter-spacing: 1px;
+    .web_author {
+        color: $grey;
+        font-weight: 300;
+        letter-spacing: 1px;
+        &:hover {
+            color: $beige;
+        }
+    }
+}

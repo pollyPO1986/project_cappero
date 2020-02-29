@@ -1,0 +1,62 @@
+extend layout/_layout.jade
+
+block content
+	.titlebar
+		h2
+			span O
+			|RDER
+	img.img-responsive.mapbox(src="images/cappero_map.png" alt="")
+	ul.dot_liststyle
+		li 訂位日期因需準備食材，最快訂位時間為2天後
+		li 人數5位以上，請來電訂位 04-23011310
+		li 訂位完成後我們會有專人與您聯絡
+	form.contact_form
+		.form-group
+			.row
+				.col-xs-8.col-sm-9
+					label.sr-only(for='') 訂位姓名
+					input.form-control(type='text', id='', placeholder='(必填) 請輸入您的大名')
+				.col-xs-4.col-sm-3
+					label.sr-only(for='') 性別
+					select.form-control.selectpicker(data-style='btn_formgrey')
+						option 女
+						option 男
+		.form-group
+			label.sr-only(for='') 連絡電話
+			input.form-control(type='number', id='', placeholder='(必填) 請輸入您的手機號碼')
+		.form-group
+			label.sr-only(for='') 電子信箱
+			input.form-control(type='email', id='', placeholder='請輸入您的電子信箱')
+		.form-group
+			label.sr-only(for='') 訂位日期
+			#datetimepicker.input-group.date
+				input.form-control(type='text')
+				span.input-group-addon
+					span.fa.fa-calendar
+		.form-group
+			label.sr-only(for='') 用餐時段
+			select.form-control.selectpicker(data-style='btn_formgrey')
+				option 午餐
+				option 晚餐
+		.form-group
+			label.sr-only(for='') 人數
+			select.form-control.selectpicker(data-style='btn_formgrey')
+				option 1 人
+				option 2 人
+				option 3 人
+				option 4 人
+		.form-group
+			label.sr-only(for='') 用餐目的
+			select.form-control.selectpicker(data-style='btn_formgrey')
+				option 用餐目的
+				option 用餐目的二
+				option 用餐目的三
+		.form-group
+			label.sr-only(for='') 留言訊息
+			textarea.form-control(row='20', id='', placeholder='如有特別需求，請留言告訴我們，謝謝')
+		.form-group
+			button.btn.btn-block.btn_beige(type='submit') 我要訂位
+			// 連至user_verify.html
+	
+
+block lightbox

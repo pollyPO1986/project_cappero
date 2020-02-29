@@ -1,0 +1,27 @@
+@charset "utf-8";
+@import "plugin/variables";
+@import "bootstrap";
+@import "bootstrap-select";
+@import "plugin/bootstrap-datetimepicker-build";
+@import "font-awesome";
+@import "plugin/jquery.fancybox.min";
+@import "reset";
+@import "variable";
+@import "mixin";
+@import "extend";
+@import "owl.carousel";
+@import "pages";
+
+
+@media print {
+  @page {
+    size: 210mm 297mm; 
+    margin: 5mm;
+  }
+  .container {
+    width: 1170px;
+  }
+  a[href]:after {
+    content: "";
+  }
+}

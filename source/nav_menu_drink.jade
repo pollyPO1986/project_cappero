@@ -1,0 +1,104 @@
+extend layout/_layout-large.jade
+
+block content
+	.col-xs-12
+		.titlebar
+			h2
+				span M
+				|ENU
+		ul.menu_list
+			li.active
+				a(href="nav_menu_lunch.html") 午餐
+					small Lunch
+			li
+				a(href="nav_menu_dinner.html") 晚餐
+					small Dinner
+			li.hidden-xs
+				a(href="nav_menu_lunch.html") 主廚推薦
+					small the Chef's special
+			li
+				a(href="nav_menu_drink.html") 飲品
+					small Drink
+		ul.menu_content.drink
+			li
+				h3.drink_title 咖啡 / 茶
+				h4.menu_title coffee / tea
+				ul.meals_content
+					li 義式濃縮
+						small Espresso
+					li 拿鐵
+						small Latte
+					li 卡布奇諾
+						small Cappuccino
+					li 英式早餐茶
+						small English Breakfast Tea
+					li 伯爵茶
+						small Earl Grey Strong
+					li 梔子烏龍茶
+						small Gardenia Oolong Tea
+					li 熱巧克力
+						small Hot Chocolate
+			li
+				h3.drink_title 無咖啡因花草茶
+				h4.menu_title caffeine free teas
+				ul.meals_content
+					li 蘋果肉桂茶
+						small Apple & Cinnamon
+					li 檸檬生薑茶
+						small Lemon & Ginger
+					li 甘草薄荷茶
+						small Licorice & Peppermint
+					li 超級花果茶
+						small Super Fruit
+			li
+				h3.drink_title 特色飲品
+				h4.menu_title Special drink
+				ul.meals_content
+					li 玫瑰蘋果冰茶
+						small Rose & Apple Iced Tea
+					li 草莓酒醋
+						small Strawberry Balsamic
+					li 熱帶美人
+						small Tropic Beauty
+					li 野莓宴
+						small Wildberry Fest
+			li
+					h3.drink_title 新鮮果汁 / 汽水
+					h4.menu_title Juice & Others
+					ul.meals_content
+						li 氣泡水
+							small Sparkling Water
+						li 可口可樂
+							small Coca Cola
+						li 薑汁汽水
+							small Ginger Ale
+						li 奇異果汁
+							small Kiwi Juice
+						li 新鮮柳澄汁
+							small Fresh Orange Juice
+			li
+				h3.drink_title 啤酒
+				h4.menu_title beer
+				ul.meals_content
+					li 莫里茲經典啤酒
+						small Moritz Beer
+					li 艾比多強化啤酒
+						small Epidor Beer
+					li 水元素無酒精啤酒
+						small Aigua de Moritz
+			li
+				h3.drink_title 紅白酒
+				h4.menu_title wine
+				ul.meals_content
+					li Luis Canas Tinto Joven
+					li Centalto Toscana Bianco IGT
+					li Bugadelles Bergerie Pays d’Oc
+					li Val de Los Frailes
+					li B.io Terre Siciliane IGP
+					li Scaia Paradiso Veneto IGT
+
+		.center-block.text-center.grey.mt60
+			p 所有費用均另收10%服務費
+			p All prices are subject to 10% service charge.
+
+block lightbox

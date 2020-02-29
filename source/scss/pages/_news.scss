@@ -1,0 +1,64 @@
+// NEWS
+.news_list {
+    color: $beige;
+    li {
+        @include flexbox(flex, wrap, space-between, center);
+        letter-spacing: 1px;
+        padding: 15px 0;
+        +li {
+            border-top: 1px solid rgba($menugrey, .5);
+        }
+        &:first-child {
+            padding-bottom: 30px;
+        }
+        a {
+            color: $grey;
+            @include rem(font-size, 1.5rem);
+            &:hover {
+                color: $buttonyellow;
+            }
+            &:last-child {
+                flex: 0 0 44px;
+            }
+        }
+        .date {
+            @include rem(font-size, 1.5rem);
+            font-weight: 300;
+            @include table-up-width {
+                flex: 0 0 107px;
+            }
+            @include phone-width {
+                flex: 100%;
+                margin-bottom: 3px;
+            }
+            &:before {
+                content: '．';
+                display: inline-block;
+            }
+        }
+        .newstitle, .inside {
+            color: $beige;
+            flex: 1 1 auto;
+            @include rem(font-size, 1.8rem);
+            font-weight: 300;
+            padding-left: 30px;
+            @include phone-width {
+                padding-left: 14px;
+            }
+            @include iphone-s-width {
+            		flex: 0 1 80%;
+            }
+        }
+        .newstitle {
+						@include font-dots(block, 1, 22px);
+        }
+        .textedit {
+            p {
+                line-height: 210%;
+            }
+            img {
+                margin: 20px auto;
+            }
+        }
+    }
+}

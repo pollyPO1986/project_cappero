@@ -1,0 +1,69 @@
+extend layout/_layout-large.jade
+
+mixin main(album,photos,cover,name,sub,price)
+	.pic-box
+		a.moveimg.pic_169(data-fancybox=album, data-thumbs='{"autoStart":true}', href=photos)
+			.imgbox(style=cover)
+		div(style='display: none;')
+			a(data-fancybox=album, href='images/album/env_800x600_01.jpg', data-thumb='images/album/env_800x600_01.jpg')
+			a(data-fancybox=album, href='images/album/env_800x600_02.jpg', data-thumb='images/album/env_800x600_02.jpg')
+			a(data-fancybox=album, href='images/album/env_800x600_03.jpg', data-thumb='images/album/env_800x600_03.jpg')
+			a(data-fancybox=album, href='images/album/drink_800x600_01.jpg', data-thumb='images/album/drink_800x600_01.jpg')
+		.caption
+			a(href="products.html")
+				h3=name
+			p.sub=sub
+			p.any_price(data-mark="NT$")=price
+
+block content
+	.col-xs-12
+		.titlebar
+			h2
+				span M
+				|ENU
+		ul.menu_list
+			li
+				a(href="nav_menu_lunch.html") 午餐
+					small Lunch
+			li.active
+				a(href="nav_menu_dinner.html") 晚餐
+					small Dinner
+			li
+				a(href="nav_menu_lunch.html") 主廚推薦
+					small the Chef's special
+			li
+				a(href="nav_menu_drink.html") 飲品
+					small Drink
+		ul.menu_content
+			li
+				h3.menu_title main course
+				.owl-carousel.owl-theme.main_courst.dinner
+					+main('meals01','images/meals/meals_800x600_01.jpg','background-image:url(images/meals/meals_800x600_01.jpg);','義式牛肉燉飯','italian risotto','500')
+					+main('meals02','images/meals/meals_800x600_02.jpg','background-image:url(images/meals/meals_800x600_02.jpg);','小春雞','test english length test english length test english length','500')
+					+main('meals03','images/meals/meals_800x600_03.jpg','background-image:url(images/meals/meals_800x600_03.jpg);','中文菜名中文菜名','italian risotto','500')
+			li
+				h3.menu_title appetizer
+				ul.meals_content
+					li 卡布理沙拉
+						small buffalo mozzarella cherry tomatoes salad
+			li
+				h3.menu_title soup
+				ul.meals_content
+					li 每日例湯
+						small daily soup
+					li 每日例湯
+						small daily soup
+			li
+				h3.menu_title drink
+				ul.meals_content
+					li 咖啡或茶
+						small coffee or tea
+			li
+				h3.menu_title dessert
+				ul.meals_content
+					li 中文名稱
+						small english name
+						p.any_price(data-mark="NT$") 350
+	
+
+block lightbox

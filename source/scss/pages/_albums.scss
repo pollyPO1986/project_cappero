@@ -1,0 +1,39 @@
+// Albums
+.albums_list {
+    @include flexbox(flex, wrap, flex-start, center);
+    li {
+        border: 1px solid $black;
+        margin-right: 15px;
+        margin-bottom: 15px;
+        @include table-up-width {
+            width: 32%;
+        }
+        @include table-width {
+            width: 230px;
+        }
+        @include phone-width {
+            width: calc((100vw - 49px) / 2);
+        }
+        &:nth-child(3n) {
+            @include table-up-width {
+                margin-right: 0;
+            }
+        }
+        &:nth-child(2n) {
+            @include phone-width {
+                margin-right: 0;
+            }
+        }
+    }
+    >.pic-box>.pic_169 {
+        @include table-up-width {
+            height: calc((305px - 2px) / 16 * 9);
+        }
+        @include table-width {
+            height: calc((230px - 2px) / 16 * 9);
+        }
+        @include phone-width {
+            height: calc((100vw - 49px) / 32 * 9);
+        }
+    }
+}

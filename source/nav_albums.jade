@@ -1,0 +1,29 @@
+extend layout/_layout-large.jade
+
+mixin albums(album,photos,cover)
+	li.pic-box
+		a.moveimg.pic_169(data-fancybox=album, data-thumbs='{"autoStart":true}', href=photos)
+			.imgbox(style=cover)
+		div(style='display: none;')
+			a(data-fancybox=album, href='images/album/env_800x600_01.jpg', data-thumb='images/album/env_800x600_01.jpg')
+			a(data-fancybox=album, href='images/album/env_800x600_02.jpg', data-thumb='images/album/env_800x600_02.jpg')
+			a(data-fancybox=album, href='images/album/env_800x600_03.jpg', data-thumb='images/album/env_800x600_03.jpg')
+			a(data-fancybox=album, href='images/album/drink_800x600_01.jpg', data-thumb='images/album/drink_800x600_01.jpg')
+
+block content
+	.titlebar
+		h2
+			span E
+			|NVIRONMENT
+	.col-sm-12.col-md-10.col-md-offset-1
+		ul.albums_list
+			+albums('album01','images/album/env_800x600_01.jpg','background-image:url(images/album/env_800x600_01.jpg);')
+			+albums('album02','images/album/env_800x600_02.jpg','background-image:url(images/album/env_800x600_02.jpg);')
+			+albums('album03','images/album/env_800x600_03.jpg','background-image:url(images/album/env_800x600_03.jpg);')
+			+albums('album04','images/album/env_800x600_04.jpg','background-image:url(images/album/env_800x600_04.jpg);')
+			+albums('album05','images/album/env_800x600_05.jpg','background-image:url(images/album/env_800x600_05.jpg);')
+			+albums('album06','images/album/env_800x600_06.jpg','background-image:url(images/album/env_800x600_06.jpg);')
+			+albums('album05','images/album/env_800x600_07.jpg','background-image:url(images/album/env_800x600_07.jpg);')
+			+albums('album06','images/album/drink_800x600_01.jpg','background-image:url(images/album/drink_800x600_01.jpg);')
+
+block lightbox

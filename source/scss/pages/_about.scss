@@ -1,0 +1,15 @@
+// About
+.about_info {
+		img {
+				margin: 30px 0;
+		}
+		p {
+				color: darken($white,10%);
+        margin: 0 0 20px;
+        letter-spacing: 1px;
+        line-height: 170%;
+        font-weight: 300;
+        word-break: break-all;
+        text-shadow: 0 0 0.0001em rgba($black, .2);
+		}
+}

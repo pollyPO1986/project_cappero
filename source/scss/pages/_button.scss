@@ -1,0 +1,82 @@
+.btn {
+    &:hover,
+    &:active,
+    &:focus {
+        color: $white;
+    }
+    &:visited {
+        color: $white;
+    }
+}
+
+.btn_black {
+    color: $white;
+    background-color: $black;
+    border-color: $black;
+    letter-spacing: 1px;
+    transition: all 0.3s ease-in-out;
+    &:hover,
+    &:focus,
+    &:active {
+        color: $white;
+        background-color: $menubeige;
+        border-color: $menubeige;
+    }
+}
+
+.btn_grey {
+    color: $beige;
+    background-color: rgba($grey, .1);
+    border-color: rgba(darken($grey,25%), .5);
+    letter-spacing: 1px;
+    transition: all 0.3s ease-in-out;
+    padding: 12px;
+    span {
+        &:before {
+            border-top: 3px solid rgba($beige, 0);
+            border-right: 6px solid $beige;
+            border-bottom: 3px solid rgba($beige, 0);
+            content: '';
+            display: inline-block;
+            margin-right: 5px;
+            vertical-align: middle;
+        }
+    }
+    &:hover,
+    &:focus {
+        color: $buttonyellow;
+        background-color: rgba($black, .3);
+        border-color: darken($grey, 25%);
+    }
+    &:visited {
+        color: $beige;
+    }
+}
+
+.btn_formgrey {
+    color: $grey;
+    background-color: lighten($black,5%);
+    border-color: darken($grey, 25%);
+    @include rem(font-size, 1.5rem);
+    line-height: 20px;
+    transition: all 0.3s ease-in-out;
+    padding: 12px;
+    &:hover,
+    &:focus {
+    		color: $grey;
+        background-color: lighten($black,10%);
+    }
+}
+
+.btn_beige {
+    color: $white;
+    background-color: $buttonyellow;
+    border-color: $buttonyellow;
+    letter-spacing: 1px;
+    transition: all 0.3s ease-in-out;
+    &:hover,
+    &:focus {
+        background-color: darken($buttonyellow,10%);
+        border-color: darken($buttonyellow,8%);
+    }
+}

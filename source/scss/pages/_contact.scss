@@ -1,0 +1,162 @@
+// Contact
+.dot_liststyle {
+    li {
+        color: darken($grey, 20%);
+    }
+}
+
+.contact_form {
+    margin: 30px 0 0;
+    .form-control {
+        height: auto;
+        background-color: lighten($black, 5%);
+        border-color: darken($grey, 25%);
+    }
+    input.form-control {
+        line-height: 100%;
+        padding: 12px;
+    }
+    .row {
+        margin-left: -8px;
+        margin-right: -8px;
+        div[class*="col-"] {
+            padding-left: 8px;
+            padding-right: 8px;
+        }
+    }
+
+    input,
+    button.btn_formgrey,
+    textarea {
+        outline: 0;
+        border: none;
+        box-shadow: none;
+        &:focus {
+            outline: 0;
+            border: none;
+            box-shadow: none;
+        }
+    }
+
+    input,
+    textarea {
+        color: $grey;
+        background-color: lighten($black, 5%);
+        border-color: darken($grey, 25%);
+    }
+
+    textarea {
+        min-height: 150px;
+    }
+
+    .bootstrap-select.btn-group .btn .filter-option {
+        text-align: center;
+    }
+
+    .input-group-addon {
+        color: $grey;
+        background-color: lighten($black, 5%);
+        border: none;
+    }
+
+    .dropdown-menu {
+        background-color: $black;
+        >li {
+            >a {
+                border: none;
+                box-shadow: none;
+                color: $grey;
+                outline: 0;
+                &:hover,
+                &:focus {
+                    border: none;
+                    box-shadow: none;
+                    outline: 0;
+                }
+                &:hover {
+                    background-color: lighten($black, 5%);
+                    color: $white;
+                }
+                &:focus {
+                    background-color: lighten($black, 20%);
+                    color: $white;
+                }
+            }
+        }
+    }
+
+     ::-webkit-input-placeholder {
+        display: inline-block;
+        line-height: 1.5rem;
+        @include rem(font-size, 1.5rem);
+        vertical-align: middle;
+    }
+
+     :-ms-input-placeholder {
+        line-height: 1.5rem;
+        @include rem(font-size, 1.5rem);
+        vertical-align: middle;
+    }
+
+     ::-moz-placeholder {
+        line-height: 1.5rem;
+        @include rem(font-size, 1.5rem);
+        vertical-align: middle;
+    }
+
+     :-moz-placeholder {
+        line-height: 1.5rem;
+        @include rem(font-size, 1.5rem);
+        vertical-align: middle;
+    }
+}
+
+.bootstrap-datetimepicker-widget {
+    &.dropdown-menu {
+        &.bottom {
+            &:before {
+                border-left: 7px solid transparent;
+                border-right: 7px solid transparent;
+                border-bottom: 7px solid $yellow;
+                border-bottom-color: lighten($black, 5%);
+                top: -7px;
+                left: 7px;
+            }
+
+            &:after {
+                border-left: 6px solid transparent;
+                border-right: 6px solid transparent;
+                border-bottom: 6px solid $black;
+                top: -6px;
+                left: 8px;
+            }
+        }
+
+        &.top {
+            &:before {
+                border-left: 7px solid transparent;
+                border-right: 7px solid transparent;
+                border-top: 7px solid $yellow;
+                border-top-color: lighten($black, 5%);
+                bottom: -7px;
+                left: 6px;
+            }
+
+            &:after {
+                border-left: 6px solid transparent;
+                border-right: 6px solid transparent;
+                border-top: 6px solid $black;
+                bottom: -6px;
+                left: 7px;
+            }
+        }
+    }
+}
+
+.mapbox {
+		max-width: 350px;
+		margin: 0 auto 30px;
+		@include phone-width {
+				width: 80%;
+		}
+}
